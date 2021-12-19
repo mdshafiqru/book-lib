@@ -22,7 +22,7 @@ namespace My_Books.Controllers
         [HttpPost("add")]
         public IActionResult AddBook([FromBody]BookVM book)
         {
-            var response = _booksService.AddBook(book);
+            var response = _booksService.AddBookWithAuthors(book);
             return Ok(response);
         }
 
